@@ -36,3 +36,9 @@ int p(int* a, int l, int h){
 	return i;
 }
 ```
+The partition function `p` takes three arguments: the array `a`,
+the lower bound of the subarray `l`, and the higher bound of the
+subarray `h`. Because of the abstraction of bounds, the partition
+array is allowed to work on any part of the array, which is necessary
+for recursion. The partition function returns the final position of
+the pivot `i`
