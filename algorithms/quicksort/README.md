@@ -44,7 +44,7 @@ for recursion. The partition function returns the final position of
 the pivot `i`
 ## Recursion
 The recursion function has a base case of low being greater than high
-(Basically when subarray length is `0`). The recursion begins with
+(Basically when subarray length is `1`). The recursion begins with
 calling the partition function `p`, then finding the final pivot
 index `v` returned from the partition function. Then, it calls itself
 for low `l` to one before the pivot `v-1`, and for one after the pivot
