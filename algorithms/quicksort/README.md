@@ -69,5 +69,5 @@ logarithmic `O(lgn)` time. `lgn` levels of `n` operations yields `O(nlgn)`
 ## Space Complexity
 The space complexity of the quicksort algorithm is linear and thus has
 asymptotic space of `O(n)`. This is because quicksort is an in-place
-sorting algorithm and only requires the original array and an extra `O(1)`
-space for swapping.
+sorting algorithm and only requires the space for the `n` elements of the
+original array and an extra `O(1)` space for swapping.
