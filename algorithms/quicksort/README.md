@@ -66,6 +66,7 @@ it has linear `O(n)` time. The quicksort function, on each level, splits
 the array into two parts, thus the tree constructed by the array is a
 binary tree and has height `lgn`; thus it has time complexity of
 logarithmic `O(lgn)` time. `lgn` levels of `n` operations yields `O(nlgn)`
+!(https://raw.githubusercontent.com/BillyZhong/cs/master/algorithms/quicksort/quicksort.svg)
 ## Space Complexity
 The space complexity of the quicksort algorithm is linear and thus has
 asymptotic space of `O(n)`. This is because quicksort is an in-place
