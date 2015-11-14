@@ -8,7 +8,42 @@ merged and places the lesser one first into the new array, moving the
 sub-array up. The algorithm requires the copying back and forth between
 the original array and a temporary array.
 ## Divide (Recursion)
+```
+void s(int* a, int* b, int l, int h, int n){
+  if(l < h){
+    int m = (l+h)/2;
+    s(a, b, l, m, n);
+    s(a, b, m+1, h, n);
+    ms(a, b, l, m, h, n);
+  }
+}
+```
 ## Merge (Sort)
+```
+void ms(int* a, int* b, int l, int m, int h, int n){
+  copy(b, b+n, a);
+  int i = l;
+  int j = m+1;
+  for(int k = l; k < h+1; k++){
+    if(i > m){
+      b[k] = a[j];
+      j++;
+    }
+    else if(j > h){
+      b[k] = a[i];
+      i++;
+    }
+    else if(a[i] <= a[j]){
+      b[k] = a[i];
+      i++;
+    }
+    else if(a[j] < a[i]){
+      b[k] = a[j];
+      j++;
+    }
+  }
+}
+```
 ## Time Complexity
 The mergesort algorithm has asymptotic `O(nlgn)` time. It breaks down the
 array into single element arrays in `O(lgn)` time because it breaks down in
