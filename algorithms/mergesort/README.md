@@ -8,16 +8,27 @@ merged and places the lesser one first into the new array, moving the
 sub-array up. The algorithm requires the copying back and forth between
 the original array and a temporary array.
 ## Divide (Recursion)
+The recursion function calls on itself, dividing the array or each subarray
+into two arrays each time. It calculates the middle between the low and high
+values and passes it as the high or low value to split the array into the first
+half or the second half respectively. It will stop when the base case of the lower bound
+being greater than the higher bound is satisfied (or when the array length is
+`1`). After there are `n` subarrays of length `1`, the merge function will be
+called for each pair of split subarrays.
 ```
-void s(int* a, int* b, int l, int h, int n){
+void d(int* a, int* b, int l, int h, int n){
   if(l < h){
     int m = (l+h)/2;
-    s(a, b, l, m, n);
-    s(a, b, m+1, h, n);
+    d(a, b, l, m, n);
+    d(a, b, m+1, h, n);
     ms(a, b, l, m, h, n);
   }
 }
 ```
+The recursion function `d` requires five arguments. It takes arrays `a` (the
+original array) and `b` (the temporary array) and the original array length
+`n` to pass to the merge function. It also has parameters low `l` and high `h`
+to be able to work on a specific run of the array.
 ## Merge (Sort)
 ```
 void ms(int* a, int* b, int l, int m, int h, int n){

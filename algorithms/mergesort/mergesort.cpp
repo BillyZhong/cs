@@ -25,11 +25,11 @@ void ms(int* a, int* b, int l, int m, int h, int n){
   }
 }
 
-void s(int* a, int* b, int l, int h, int n){
+void d(int* a, int* b, int l, int h, int n){
   if(l < h){
     int m = (l+h)/2;
-    s(a, b, l, m, n);
-    s(a, b, m+1, h, n);
+    d(a, b, l, m, n);
+    d(a, b, m+1, h, n);
     ms(a, b, l, m, h, n);
   }
 }
@@ -43,7 +43,7 @@ int main(){
     cin >> a[i];
   }
   copy(a, a+n, b);
-	s(a, b, 0, n-1, n);
+	d(a, b, 0, n-1, n);
 	for(int i = 0; i < n; i++){
 		cout << b[i] << " ";
 	}
