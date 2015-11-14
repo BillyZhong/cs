@@ -49,6 +49,7 @@ The recursion function has a base case of low being greater than high
 calling the partition function `p`, then finding the final pivot
 index `v` returned from the partition function. Then, it calls itself
 for low `l` to one before the pivot `v-1`, and for one after the pivot
+(or for both halves of the array, as split by the final partition index)
 `v+1` to high `h`
 ```
 void q(int* a, int l, int h){
