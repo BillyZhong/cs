@@ -6,7 +6,9 @@ into two arrays), and then call the partition function for the
 two split arrays. This process is repeated on smaller and smaller
 parts of the array until the all of the sub-arrays are sorted.
 Because the algorithm sorts in-place, there is no need to
-recombine all the split arrays
+recombine all the split arrays. This algorithm runs on the assumption
+that, after each partition, all elements are on their respective sides
+of the pivot
 ## Partition
 The partition function begins by taking the full array and choosing
 a pivot. Typically, the pivot will be the last element, but that

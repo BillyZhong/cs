@@ -6,7 +6,7 @@ using a linear sorting function until it reforms the original array. The
 linear sorting algorithm compares the first index of both arrays being
 merged and places the lesser one first into the new array, moving the
 sub-array up. The algorithm requires the copying back and forth between
-the original array and a temporary array.
+the original array and a temporary array
 ## Divide (Recursion)
 The recursion function calls on itself, dividing the array or each subarray
 into two arrays each time. It calculates the middle between the low and high
@@ -30,6 +30,15 @@ original array) and `b` (the temporary array) and the original array length
 `n` to pass to the merge function. It also has parameters low `l` and high `h`
 to be able to work on a specific run of the array.
 ## Merge (Sort)
+The merge function starts by copying the temporary array `b` back onto array
+`a` (`b` initially is the same value as `a`). Then, for each element in the
+subarray of `a`, the function checks which is smaller and assigns it to the
+corresponding position in a subarray of `b`. When one of the smaller subarrays
+has no more elements, the remainder of the other subarray is assigned to their
+positions in array `b`. This is why the algorithm uses a temporary array;
+copying back and forth allows the algorithm to move level by level up the
+tree. The merge function, being bottom-up runs on the assumption that all
+subarrays being merged are sorted
 ```
 void ms(int* a, int* b, int l, int m, int h, int n){
   copy(b, b+n, a);
