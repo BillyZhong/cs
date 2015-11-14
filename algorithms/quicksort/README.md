@@ -44,13 +44,13 @@ array is allowed to work on any part of the array, which is necessary
 for recursion. The partition function returns the final position of
 the pivot `i`
 ## Recursion
-The recursion function has a base case of low being greater than high
-(Basically when subarray length is `1`). The recursion begins with
-calling the partition function `p`, then finding the final pivot
-index `v` returned from the partition function. Then, it calls itself
-for low `l` to one before the pivot `v-1`, and for one after the pivot
-(or for both halves of the array, as split by the final partition index)
-`v+1` to high `h`
+The recursion function has a base case of low being greater than or
+equal to high (Basically when subarray length is `1`). The recursion
+begins with calling the partition function `p`, then finding the
+final pivot index `v` returned from the partition function. Then,
+it calls itself for low `l` to one before the pivot `v-1`, and for
+one after the pivot `v+1` to high `h` (or for both halves of the
+array, as split by the final partition index)
 ```
 void q(int* a, int l, int h){
 	if(l < h){

@@ -11,10 +11,10 @@ the original array and a temporary array.
 The recursion function calls on itself, dividing the array or each subarray
 into two arrays each time. It calculates the middle between the low and high
 values and passes it as the high or low value to split the array into the first
-half or the second half respectively. It will stop when the base case of the lower bound
-being greater than the higher bound is satisfied (or when the array length is
-`1`). After there are `n` subarrays of length `1`, the merge function will be
-called for each pair of split subarrays.
+half or the second half respectively. It will stop when the base case of the
+lower bound being greater than or equal to the higher bound is satisfied
+(or when the array length is `1`). After there are `n` subarrays of length
+`1`, the merge function will be called for each pair of split subarrays.
 ```
 void d(int* a, int* b, int l, int h, int n){
   if(l < h){
