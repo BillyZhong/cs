@@ -15,9 +15,9 @@ iterate through the array completely. The task of the partition is
 to end up with the pivot somewhere in the array with all elements
 less than the pivot to the left of it and all elements greater than
 the pivot to the right of it. This is usually achieved by passing
-by the numbers greater and swapping the lesser numbers after, then
-swapping the pivot with the element between the lesser and greater
-numbers
+by the numbers greater than the pivot and swapping the numbers less
+than the pivot (with the greater numbers) after, then swapping the
+pivot with the element between the lesser and greater numbers
 ```
 int p(int* a, int l, int h){
   int t = 0;
