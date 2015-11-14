@@ -1,11 +1,12 @@
 # Quicksort
 ## Algorithm
-The quicksort is a top-down, recursive algorithm. The general 
+The quicksort is a top-down, recursive algorithm. The general
 algorithm is to call a partition function (which splits the array
 into two arrays), and then call the partition function for the
-two split arrays. This process is repeated until the arrays are
-all sorted. Because the algorithm sorts in-place, there is no need
-to recombine all the split arrays
+two split arrays. This process is repeated on smaller and smaller
+parts of the array until the all of the sub-arrays are sorted.
+Because the algorithm sorts in-place, there is no need to
+recombine all the split arrays
 ## Partition
 The partition function begins by taking the full array and choosing
 a pivot. Typically, the pivot will be the last element, but that
