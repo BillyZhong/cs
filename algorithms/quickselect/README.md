@@ -67,7 +67,10 @@ sum
 ![](https://github.com/BillyZhong/cs/raw/master/algorithms/quickselect/proof.png)
 
 For any constant ratio `r`, we can see that the infinite geometric sum
-will always be bounded by some constant 'c', and thus the number of
+will always be bounded by some constant `c`, and thus the number of
 operations will always be `n` times a constant or `O(n)`
 ![](https://github.com/BillyZhong/cs/raw/master/algorithms/quickselect/quickselect.png)
 ## Space Complexity
+The quicksort requires `O(n)` space. It only needs space for the `n`
+elements of the input array and a single constant space for the input
+`k`
