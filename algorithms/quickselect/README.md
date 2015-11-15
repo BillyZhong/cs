@@ -59,7 +59,8 @@ void q(int* a, int k, int l, int h){
 ```
 ## Time Complexity
 The quickselect runs in linear `O(n)` time. This is because
-the algorithm has a number of total operations similar to that
+the algorithm works on a fraction of the previous array each
+time and thus has a number of total operations similar to that
 of a geometric series with a ratio of `0 < r < 1`. Taking the upper
 bound, the number of operations can be represented by the infinite
 sum
