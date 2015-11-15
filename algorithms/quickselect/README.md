@@ -63,7 +63,9 @@ the algorithm has a number of total operations similar to that
 of a geometric series with a ratio of `0 < r < 1`. Taking the upper
 bound, the number of operations can be represented by the infinite
 sum
+
 ![](https://github.com/BillyZhong/cs/raw/master/algorithms/quickselect/proof.png)
+
 For any constant ratio `r`, we can see that the infinite geometric sum
 will always be bounded by some constant 'c', and thus the number of
 operations will always be `n` times a constant or `O(n)`
