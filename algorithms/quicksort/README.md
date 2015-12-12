@@ -8,7 +8,8 @@ parts of the array until the all of the sub-arrays are sorted.
 Because the algorithm sorts in-place, there is no need to
 recombine all the split arrays. This algorithm runs on the assumption
 that, after each partition, all elements are on their respective sides
-of the pivot
+of the pivot. The algorithm can be optimized by using a random pivot and 
+shifting it to the end, as it reduces the worst case performance
 ## Partition
 The partition function begins by taking the full array and choosing
 a pivot. Typically, the pivot will be the last element, but that
