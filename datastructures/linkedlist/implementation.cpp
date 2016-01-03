@@ -3,8 +3,8 @@ using namespace std;
 
 /**
 struct DoublyLinkedNode{
-  Node *next;
-  Node *prev;
+  DoublyLinkedNode *next;
+  DoublyLinkedNode *prev;
   int val;
 }
 **/
