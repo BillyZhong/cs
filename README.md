@@ -1,7 +1,6 @@
 # cs
 # interview study sheet
 ######(Forked from [kimberli/interviews](https://github.com/kimberli/interviews))
-# interview study sheet
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
