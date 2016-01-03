@@ -1,4 +1,4 @@
-# cs
+# Computer Science
 # interview study sheet
 ######(Forked from [kimberli/interviews](https://github.com/kimberli/interviews))
 
