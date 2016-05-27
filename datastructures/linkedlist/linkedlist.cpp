@@ -41,5 +41,5 @@ void deletenode(Node * prev, Node * n){
 }
 
 int main(){
-  Node * head = new Node{NULL, 0};
+  Node head = {NULL, 0};
 }

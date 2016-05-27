@@ -1,4 +1,6 @@
 #include <iostream>
+#include <vector>
+#include <stdlib.h>
 using namespace std;
 
 struct Node{
@@ -6,7 +8,7 @@ struct Node{
   int height;
   Node *left;
   Node *right;
-}
+};
 
 void updateheight(Node * node){
   int leftheight = -1;
@@ -92,7 +94,7 @@ void insert(Node * newnode, Node * currentnode){
       }
       else{
         rotateleft((*currentnode).left, (*(*currentnode).left).right);
-        rotateright(currentnode, (*(*currentnode).left).right);
+        rotateright(currentnode, (*currentnode).left);
       }
     }
     else{
@@ -101,7 +103,7 @@ void insert(Node * newnode, Node * currentnode){
       }
       else{
         rotateright((*currentnode).right, (*(*currentnode).right).left);
-        rotateleft(currentnode, (*(*currentnode).right).left);
+        rotateleft(currentnode, (*currentnode).right);
       }
     }
   }
@@ -111,5 +113,5 @@ void insert(Node * newnode, Node * currentnode){
 }
 
 int main(){
-  Node * root = new Node{0, 0, NULL, NULL};
+  Node root = {0, 0, NULL, NULL};
 }
