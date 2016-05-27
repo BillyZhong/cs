@@ -105,7 +105,9 @@ void insert(Node * newnode, Node * currentnode){
       }
     }
   }
-  updateheight(currentnode);
+  else{
+    updateheight(currentnode);
+  }
 }
 
 int main(){
