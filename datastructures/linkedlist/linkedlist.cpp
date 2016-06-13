@@ -5,13 +5,13 @@ using namespace std;
 struct DoublyLinkedNode{
   DoublyLinkedNode *next;
   DoublyLinkedNode *prev;
-  int val;
+  int key;
 }
 **/
 
 struct Node {
   Node *next;
-  int val;
+  int key;
 };
 
 Node * accessbyindex(int index, Node * head){
@@ -22,9 +22,9 @@ Node * accessbyindex(int index, Node * head){
   return temp;
 }
 
-Node * searchbyvalue(int query, Node * head){
+Node * searchbykeyue(int query, Node * head){
   Node * temp = head;
-  while((*temp).val != query){
+  while((*temp).key != query){
     temp = (*temp).next;
   }
   return temp;

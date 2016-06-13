@@ -4,7 +4,7 @@
 using namespace std;
 
 struct Node{
-  int val;
+  int key;
   int height;
   Node *left;
   Node *right;
@@ -23,9 +23,9 @@ void updateheight(Node * node){
 }
 
 void rotateleft(Node * parent, Node * child){
-  int tempval = (*parent).val;
-  (*parent).val = (*child).val;
-  (*child).val = tempval;
+  int tempkey = (*parent).key;
+  (*parent).key = (*child).key;
+  (*child).key = tempkey;
   (*parent).right = (*child).right;
   (*child).right = (*child).left;
   (*child).left = (*parent).left;
@@ -35,9 +35,9 @@ void rotateleft(Node * parent, Node * child){
 }
 
 void rotateright(Node * parent, Node * child){
-  int tempval = (*parent).val;
-  (*parent).val = (*child).val;
-  (*child).val = tempval;
+  int tempkey = (*parent).key;
+  (*parent).key = (*child).key;
+  (*child).key = tempkey;
   (*parent).left = (*child).left;
   (*child).left = (*child).right;
   (*child).right = (*parent).right;
@@ -47,7 +47,7 @@ void rotateright(Node * parent, Node * child){
 }
 
 void insert(Node * newnode, Node * currentnode){
-  if((*newnode).val < (*currentnode).val){
+  if((*newnode).key < (*currentnode).key){
     if((*currentnode).left == NULL){
       (*currentnode).left = newnode;
     }
@@ -113,12 +113,12 @@ void insert(Node * newnode, Node * currentnode){
 }
 
 void print(Node * n){
-  cout << (*n).val << " ";
+  cout << (*n).key << " ";
   if((*n).left != NULL){
-    cout << "left: " << (*(*n).left).val << " ";
+    cout << "left: " << (*(*n).left).key << " ";
   }
   if((*n).right != NULL){
-    cout << "right: " << (*(*n).right).val;
+    cout << "right: " << (*(*n).right).key;
   }
   cout << endl;
   if((*n).left != NULL){
@@ -138,7 +138,7 @@ int main(){
     int v;
     cin >> v;
     Node * temp = new Node;
-    (*temp).val = v;
+    (*temp).key = v;
     (*temp).height = 0;
     (*temp).left = NULL;
     (*temp).right = NULL;
