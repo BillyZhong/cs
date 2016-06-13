@@ -112,6 +112,37 @@ void insert(Node * newnode, Node * currentnode){
   }
 }
 
+void print(Node * n){
+  cout << (*n).val << " ";
+  if((*n).left != NULL){
+    cout << "left: " << (*(*n).left).val << " ";
+  }
+  if((*n).right != NULL){
+    cout << "right: " << (*(*n).right).val;
+  }
+  cout << endl;
+  if((*n).left != NULL){
+    print((*n).left);
+  }
+  if((*n).right != NULL){
+    print((*n).right);
+  }
+}
+
 int main(){
-  Node root = {0, 0, NULL, NULL};
+  int n, rv;
+  cin >> n;
+  cin >> rv;
+  Node root = {rv, 0, NULL, NULL};
+  for(int i = 0; i < n-1; i++){
+    int v;
+    cin >> v;
+    Node * temp = new Node;
+    (*temp).val = v;
+    (*temp).height = 0;
+    (*temp).left = NULL;
+    (*temp).right = NULL;
+    insert(temp, &root);
+  }
+  print(&root);
 }
