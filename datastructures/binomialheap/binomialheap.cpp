@@ -36,6 +36,7 @@ void linkTrees(BinomialHeap * heap){
       rankList[(*(*currentRoot).current).rank] = currentRoot;
     }
     else{
+      //Root * currentListRoot = rankList[(*(*currentRoot).current).rank];
       if((*(*rankList[(*(*currentRoot).current).rank]).current).key <= (*(*currentRoot).current).key){
         (*(*rankList[(*(*currentRoot).current).rank]).current).children.push_back((*currentRoot).current);
         (*(*currentRoot).current).parent = (*rankList[(*(*currentRoot).current).rank]).current;
@@ -64,7 +65,7 @@ void linkTrees(BinomialHeap * heap){
 }
 
 int deleteMin(){
-  
+
 }
 
 void insertKey(){
